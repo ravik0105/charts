@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-aje!vxnw*&9r46o!hd4soa8-bb6b7p*8kh%$rl5cflas#(e(3v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','https://cpsinvoiceapp.herokuapp.com/']
+ALLOWED_HOSTS = ['127.0.0.1','cpsinvoiceapp.herokuapp.com']
 
 
 # Application definition
