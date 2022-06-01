@@ -1,0 +1,20 @@
+{% extends 'admin/base.html' %}
+
+{% block content%}
+<div>
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        <tr>
+        <td>{{form.as_table}}</td>
+    </tr>
+    <tr>
+        <td>
+    <input class="btn btn-primary" type ="submit" name="Submit">
+</td>
+</tr>
+</table>
+ 
+</form>
+</div>
+{% endblock %}

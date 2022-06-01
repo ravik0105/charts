@@ -1,0 +1,28 @@
+
+body{
+    background-color :orange;
+
+}
+
+.card text-center text-white mb-3{
+     border :2px solid black;
+     background-color : rgb(100 , 200 , 200);
+    
+}
+
+#Unpaid{
+    background : #127d92;
+
+}
+
+
+#Billing{
+    background : #0b5d6d;
+
+}
+
+#Total{
+    background : #0fc2e6;
+
+}
+     

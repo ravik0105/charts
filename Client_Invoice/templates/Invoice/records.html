@@ -1,0 +1,55 @@
+{% extends 'Invoice/base.html'%}
+
+{% block content %}
+<div class="card card-body">
+    <h4>Invoice Records</h4>
+    <div class ="card card-body">
+        <table class="table table-sm table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Clint</th>
+                <th>Position</th>
+                <th>Empsalary</th>
+                <th>Billing</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Invoive</th>
+                <th>Doj</th>
+                <th>Invoiced_on</th>
+                <th>Payment_on</th>
+                <th>Total</th>
+                <th>Collection</th>
+                <th>Recruiter</th>
+                <th>Update</th>
+
+
+                
+            </tr>
+            {%for order in invoice_records %}
+            <tr>
+
+                <td>{{order.Name}}</td>
+                <td>{{order.Clint}}</td>
+                <td>{{order.Position}}</td>
+                <td>{{order.Empsalary}}</td>
+                <td>{{order.Billing}}</td>
+                <td>{{order.Type}}</td>
+                <td>{{order.Status}}</td>
+                <td>{{order.Invoive}}</td>
+                <td>{{order.Doj}}</td>
+                <td>{{order.Invoiced_on}}</td>
+                <td>{{order.Payment_on}}</td>
+                <td>{{order.Total}}</td>
+                <td>{{order.Collection}}</td>
+                <td>{{order.Recruiter}}</td>
+                <td><a class="btn btn-success"
+		href="{% url 'update' order.s_no %}">Edit</a></td>
+            </tr>
+
+            {% endfor %}
+        </table>
+        
+    </div>
+
+</div>
+{% endblock content%}

@@ -1,0 +1,44 @@
+{% extends 'Invoice/base.html' %}
+{%block content%}
+<div class="card card-body">
+    <h4>Paid Status</h4>
+
+    <div class ="card card-body">
+        <table class="table table-sm table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Clint</th>
+                <th>Billing</th>
+                <th>Type</th>
+                <th>Invoice</th>
+                <th>Invoiced_on</th>
+                <th>Payment_on</th>
+                <th>Total</th>
+                <th>Collection</th>
+                <th>Update</th>
+            </tr>
+            {%for order in billi_view %}
+    
+            <tr>
+
+                <td>{{order.Name}}</td>
+                <td>{{order.Clint}}</td>
+                <td>{{order.Billing}}</td>
+                <td>{{order.Type}}</td>
+                <td>{{order.Invoice}}</td>
+                <td>{{order.Invoiced_on}}</td>
+                <td>{{order.Payment_on}}</td>
+                <td>{{order.Total}}</td>
+                <td>{{order.Collection}}</td>
+                <td><a class="btn btn-success"
+		href="{% url 'update' order.s_no %}">Edit</a></td>
+                
+
+            </tr>
+       
+            {% endfor %}
+        </table>
+    </div>
+
+</div>
+{%endblock content%}
